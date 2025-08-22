@@ -2,6 +2,12 @@
 
 > **O jeito mais fácil e divertido de dominar CSS Flexbox!** ✨
 
+## 🌐 Demonstração Online
+
+**🎮 [ACESSE AGORA O GUIA INTERATIVO](https://guia-completo-flexbox.vercel.app/)**
+
+👆 Clique no link acima e comece a aprender Flexbox imediatamente no seu navegador!
+
 ## 🚀 Comece Agora - É Simples!
 
 **📂 Baixe os arquivos** → **🌐 Abr**🎯 Sua jornada no Flexbox começa agora!**
@@ -55,7 +61,15 @@ Não precisa instalar nada. Funciona em qualquer navegador moderno!
 
 ## 🎮 Como usar este guia?
 
-### 🎯 **Para Iniciantes Completos:**
+### � **Opção 1: Online (Recomendado)**
+**[Acesse diretamente no navegador](https://guia-completo-flexbox.vercel.app/)** - Sem downloads, sem instalação!
+
+### 📁 **Opção 2: Local**
+1. Baixe os arquivos do projeto
+2. Abra o arquivo `index.html` no seu navegador
+3. Comece a explorar!
+
+### �🎯 **Para Iniciantes Completos:**
 1. **Comece pelos "Conceitos Básicos"** - Entenda o que é Flexbox
 2. **Vá para "Justify Content"** - Sua primeira propriedade interativa!
 3. **Experimente TODOS os botões** - Não tenha medo de clicar
@@ -474,6 +488,8 @@ updateOrder()            // Order
 - [ ] Gerador de código Flexbox
 
 ---
+
+**🎮 [COMECE A APRENDER AGORA!](https://guia-completo-flexbox.vercel.app/)**
 
 **⭐ Se este projeto ajudou você a aprender Flexbox, considere dar uma estrela no repositório!**
 
