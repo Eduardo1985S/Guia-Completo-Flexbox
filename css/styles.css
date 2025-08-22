@@ -198,7 +198,7 @@ header code {
     transform: translateY(0);
 }
 
-/* Botão Voltar ao Topo */
+/* Botão Voltar ao Topo - Formato Retangular */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -206,9 +206,8 @@ header code {
     background: var(--gradient-header);
     color: var(--color-white);
     border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    border-radius: var(--radius);
+    padding: 12px 16px;
     font-size: 1.2rem;
     cursor: pointer;
     box-shadow: var(--shadow-item);
@@ -216,6 +215,9 @@ header code {
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
+    /* Garantindo formato retangular */
+    width: auto;
+    height: auto;
 }
 
 .back-to-top.visible {
