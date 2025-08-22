@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo Flexbox</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Guia Completo Flexbox</h1>
+        <p>Aprenda todas as propriedades do CSS Flexbox de forma prática e interativa</p>
+    </header>
+
+    <section class="property-header">
+        <h2>Conceitos Básicos do Flexbox</h2>
+        <p>Entenda como funciona o display flex e suas características fundamentais</p>
+    </section>
+
+    <main>
+        <section class="explanation">
+            <h3>O que é Flexbox?</h3>
+            <p>O <strong>Flexbox</strong> (Flexible Box Layout) é um método de layout CSS que permite organizar elementos de forma flexível e eficiente. Para ativar o Flexbox, aplicamos <code>display: flex</code> ao elemento pai (container).</p>
+        </section>
+
+        <section class="comparison-section">
+            <h3>Comparação: Sem Flex vs Com Flex</h3>
+            
+            <div class="comparison">
+                <div class="comparison-item">
+                    <h4>Sem Flexbox (display: block)</h4>
+                    <p>Os elementos ficam empilhados verticalmente (comportamento padrão de divs)</p>
+                    <div class="container-normal">
+                        <div class="item-normal">1</div>
+                        <div class="item-normal">2</div>
+                        <div class="item-normal">3</div>
+                    </div>
+                    <code>display: block; (padrão)</code>
+                </div>
+
+                <div class="comparison-item">
+                    <h4>Com Flexbox (display: flex)</h4>
+                    <p>Os elementos se alinham horizontalmente no mesmo eixo</p>
+                    <div class="container-flex">
+                        <div class="item-flex">1</div>
+                        <div class="item-flex">2</div>
+                        <div class="item-flex">3</div>
+                    </div>
+                    <code>display: flex;</code>
+                </div>
+            </div>
+        </section>
+
+        <section class="concepts-section">
+            <h3>Conceitos Fundamentais</h3>
+            
+            <div class="concepts-grid">
+                <div class="concept-card">
+                    <h4>🎯 Flex Container</h4>
+                    <p>O elemento pai que recebe <code>display: flex</code></p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>📦 Flex Items</h4>
+                    <p>Os elementos filhos diretos do flex container</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>➡️ Eixo Principal</h4>
+                    <p>Direção horizontal (padrão) onde os itens se alinham</p>
+                </div>
+                
+                <div class="concept-card">
+                    <h4>⬇️ Eixo Transversal</h4>
+                    <p>Direção perpendicular ao eixo principal (vertical)</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="property-header">
+            <h2>Justify Content</h2>
+            <p>Como alinhar itens no eixo principal (horizontal)</p>
+        </section>
+        <section class="explanation">
+            <h3>O que é Justify Content?</h3>
+            <p>A propriedade <code>justify-content</code> define como os itens flexíveis são alinhados ao longo do eixo principal (horizontal por padrão) de um container flex.</p>
+        </section>
+
+        <section class="demo-section">
+            <h3>Demonstrações</h3>
+            
+            <div class="demo">
+                <h3>flex-start (padrão)</h3>
+                <p>Alinha os itens no início do container</p>
+                <div class="flex-container flex-start">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <code>justify-content: flex-start;</code>
+            </div>
+
+            <div class="demo">
+                <h3>center</h3>
+                <p>Centraliza os itens no container</p>
+                <div class="flex-container center">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <code>justify-content: center;</code>
+            </div>
+
+            <div class="demo">
+                <h3>flex-end</h3>
+                <p>Alinha os itens no final do container</p>
+                <div class="flex-container flex-end">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <code>justify-content: flex-end;</code>
+            </div>
+
+            <div class="demo">
+                <h3>space-between</h3>
+                <p>Distribui espaço igual entre os itens</p>
+                <div class="flex-container space-between">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <code>justify-content: space-between;</code>
+            </div>
+
+            <div class="demo">
+                <h3>space-around</h3>
+                <p>Distribui espaço igual ao redor dos itens</p>
+                <div class="flex-container space-around">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <code>justify-content: space-around;</code>
+            </div>
+
+            <div class="demo">
+                <h3>space-evenly</h3>
+                <p>Distribui espaço igual entre e ao redor dos itens</p>
+                <div class="flex-container space-evenly">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+                <code>justify-content: space-evenly;</code>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h3>Teste Interativo</h3>
+            <p>Clique nos botões para ver o efeito de cada valor:</p>
+            
+            <div class="controls">
+                <button onclick="changeJustifyContent('flex-start')">flex-start</button>
+                <button onclick="changeJustifyContent('center')">center</button>
+                <button onclick="changeJustifyContent('flex-end')">flex-end</button>
+                <button onclick="changeJustifyContent('space-between')">space-between</button>
+                <button onclick="changeJustifyContent('space-around')">space-around</button>
+                <button onclick="changeJustifyContent('space-evenly')">space-evenly</button>
+            </div>
+
+            <div class="interactive-container" id="interactiveContainer">
+                <div class="flex-item">A</div>
+                <div class="flex-item">B</div>
+                <div class="flex-item">C</div>
+            </div>
+            
+            <div class="current-value">
+                Valor atual: <span id="currentValue">flex-start</span>
+            </div>
+        </section>
+
+        <section class="property-header">
+            <h2>Flex Direction</h2>
+            <p>Como definir a direção dos itens no container flex</p>
+        </section>
+
+        <section class="explanation">
+            <h3>O que é Flex Direction?</h3>
+            <p>A propriedade <code>flex-direction</code> define a direção do eixo principal do container flex, controlando como os itens são organizados: horizontalmente, verticalmente, ou em ordem reversa.</p>
+        </section>
+
+        <section class="demo-section">
+            <h3>Demonstrações</h3>
+            
+            <div class="demo">
+                <h4>row (padrão)</h4>
+                <p>Organiza os itens horizontalmente, da esquerda para a direita</p>
+                <div class="flex-container-direction row">
+                    <div class="flex-item-direction">1</div>
+                    <div class="flex-item-direction">2</div>
+                    <div class="flex-item-direction">3</div>
+                </div>
+                <code>flex-direction: row;</code>
+            </div>
+
+            <div class="demo">
+                <h4>row-reverse</h4>
+                <p>Organiza os itens horizontalmente, da direita para a esquerda</p>
+                <div class="flex-container-direction row-reverse">
+                    <div class="flex-item-direction">1</div>
+                    <div class="flex-item-direction">2</div>
+                    <div class="flex-item-direction">3</div>
+                </div>
+                <code>flex-direction: row-reverse;</code>
+            </div>
+
+            <div class="demo">
+                <h4>column</h4>
+                <p>Organiza os itens verticalmente, de cima para baixo</p>
+                <div class="flex-container-direction column">
+                    <div class="flex-item-direction">1</div>
+                    <div class="flex-item-direction">2</div>
+                    <div class="flex-item-direction">3</div>
+                </div>
+                <code>flex-direction: column;</code>
+            </div>
+
+            <div class="demo">
+                <h4>column-reverse</h4>
+                <p>Organiza os itens verticalmente, de baixo para cima</p>
+                <div class="flex-container-direction column-reverse">
+                    <div class="flex-item-direction">1</div>
+                    <div class="flex-item-direction">2</div>
+                    <div class="flex-item-direction">3</div>
+                </div>
+                <code>flex-direction: column-reverse;</code>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h3>Teste Interativo</h3>
+            <p>Clique nos botões para ver o efeito de cada direção:</p>
+            
+            <div class="controls">
+                <button onclick="changeFlexDirection('row')">row</button>
+                <button onclick="changeFlexDirection('row-reverse')">row-reverse</button>
+                <button onclick="changeFlexDirection('column')">column</button>
+                <button onclick="changeFlexDirection('column-reverse')">column-reverse</button>
+            </div>
+
+            <div class="interactive-container-direction" id="interactiveDirectionContainer">
+                <div class="flex-item-direction">A</div>
+                <div class="flex-item-direction">B</div>
+                <div class="flex-item-direction">C</div>
+            </div>
+            
+            <div class="current-value">
+                Valor atual: <span id="currentDirectionValue">row</span>
+            </div>
+        </section>
+
+        <section class="property-header">
+            <h2>Flex Wrap</h2>
+            <p>Como os itens se comportam quando não cabem no container</p>
+        </section>
+
+        <section class="explanation">
+            <h3>O que é Flex Wrap?</h3>
+            <p>A propriedade <code>flex-wrap</code> controla se os itens flex devem quebrar para uma nova linha quando não cabem no container, ou se devem ser comprimidos na mesma linha.</p>
+        </section>
+
+        <section class="demo-section">
+            <h3>Demonstrações</h3>
+            
+            <div class="demo">
+                <h4>nowrap (padrão)</h4>
+                <p>Todos os itens ficam na mesma linha, mesmo que seja necessário comprimir</p>
+                <div class="flex-container-wrap nowrap-demo">
+                    <div class="flex-item-wrap">Item 1</div>
+                    <div class="flex-item-wrap">Item 2</div>
+                    <div class="flex-item-wrap">Item 3</div>
+                    <div class="flex-item-wrap">Item 4</div>
+                    <div class="flex-item-wrap">Item 5</div>
+                    <div class="flex-item-wrap">Item 6</div>
+                </div>
+                <code>flex-wrap: nowrap;</code>
+            </div>
+
+            <div class="demo">
+                <h4>wrap</h4>
+                <p>Os itens quebram para uma nova linha quando necessário</p>
+                <div class="flex-container-wrap wrap-demo">
+                    <div class="flex-item-wrap">Item 1</div>
+                    <div class="flex-item-wrap">Item 2</div>
+                    <div class="flex-item-wrap">Item 3</div>
+                    <div class="flex-item-wrap">Item 4</div>
+                    <div class="flex-item-wrap">Item 5</div>
+                    <div class="flex-item-wrap">Item 6</div>
+                </div>
+                <code>flex-wrap: wrap;</code>
+            </div>
+
+            <div class="demo">
+                <h4>wrap-reverse</h4>
+                <p>Os itens quebram para uma nova linha, mas na ordem reversa</p>
+                <div class="flex-container-wrap wrap-reverse-demo">
+                    <div class="flex-item-wrap">Item 1</div>
+                    <div class="flex-item-wrap">Item 2</div>
+                    <div class="flex-item-wrap">Item 3</div>
+                    <div class="flex-item-wrap">Item 4</div>
+                    <div class="flex-item-wrap">Item 5</div>
+                    <div class="flex-item-wrap">Item 6</div>
+                </div>
+                <code>flex-wrap: wrap-reverse;</code>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h3>Teste Interativo</h3>
+            <p>Clique nos botões para ver como o wrap afeta o layout:</p>
+            
+            <div class="controls">
+                <button onclick="changeFlexWrap('nowrap')">nowrap</button>
+                <button onclick="changeFlexWrap('wrap')">wrap</button>
+                <button onclick="changeFlexWrap('wrap-reverse')">wrap-reverse</button>
+            </div>
+
+            <div class="interactive-container-wrap" id="interactiveWrapContainer">
+                <div class="flex-item-wrap">A</div>
+                <div class="flex-item-wrap">B</div>
+                <div class="flex-item-wrap">C</div>
+                <div class="flex-item-wrap">D</div>
+                <div class="flex-item-wrap">E</div>
+                <div class="flex-item-wrap">F</div>
+            </div>
+            
+            <div class="current-value">
+                Valor atual: <span id="currentWrapValue">nowrap</span>
+            </div>
+        </section>
+
+        <section class="property-header">
+            <h2>Align Items</h2>
+            <p>Como alinhar itens no eixo transversal (vertical)</p>
+        </section>
+
+        <section class="explanation">
+            <h3>O que é Align Items?</h3>
+            <p>A propriedade <code>align-items</code> controla como os itens flex são alinhados ao longo do eixo transversal (perpendicular ao eixo principal). Por padrão, alinha verticalmente quando flex-direction é row.</p>
+        </section>
+
+        <section class="demo-section">
+            <h3>Demonstrações</h3>
+            
+            <div class="demo">
+                <h4>stretch (padrão)</h4>
+                <p>Os itens se esticam para preencher toda a altura do container</p>
+                <div class="flex-container-align stretch-demo">
+                    <div class="flex-item-align">Item 1</div>
+                    <div class="flex-item-align">Item 2<br>Com mais<br>conteúdo</div>
+                    <div class="flex-item-align">Item 3</div>
+                </div>
+                <code>align-items: stretch;</code>
+            </div>
+
+            <div class="demo">
+                <h4>flex-start</h4>
+                <p>Alinha os itens no início do eixo transversal (topo)</p>
+                <div class="flex-container-align flex-start-align">
+                    <div class="flex-item-align">Item 1</div>
+                    <div class="flex-item-align">Item 2<br>Com mais<br>conteúdo</div>
+                    <div class="flex-item-align">Item 3</div>
+                </div>
+                <code>align-items: flex-start;</code>
+            </div>
+
+            <div class="demo">
+                <h4>center</h4>
+                <p>Centraliza os itens no eixo transversal</p>
+                <div class="flex-container-align center-align">
+                    <div class="flex-item-align">Item 1</div>
+                    <div class="flex-item-align">Item 2<br>Com mais<br>conteúdo</div>
+                    <div class="flex-item-align">Item 3</div>
+                </div>
+                <code>align-items: center;</code>
+            </div>
+
+            <div class="demo">
+                <h4>flex-end</h4>
+                <p>Alinha os itens no final do eixo transversal (base)</p>
+                <div class="flex-container-align flex-end-align">
+                    <div class="flex-item-align">Item 1</div>
+                    <div class="flex-item-align">Item 2<br>Com mais<br>conteúdo</div>
+                    <div class="flex-item-align">Item 3</div>
+                </div>
+                <code>align-items: flex-end;</code>
+            </div>
+
+            <div class="demo">
+                <h4>baseline</h4>
+                <p>Alinha os itens pela linha de base do texto</p>
+                <div class="flex-container-align baseline-align">
+                    <div class="flex-item-align small-text">Pequeno</div>
+                    <div class="flex-item-align large-text">Grande</div>
+                    <div class="flex-item-align medium-text">Médio</div>
+                </div>
+                <code>align-items: baseline;</code>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h3>Teste Interativo</h3>
+            <p>Clique nos botões para ver como o alinhamento afeta os itens:</p>
+            
+            <div class="controls">
+                <button onclick="changeAlignItems('stretch')">stretch</button>
+                <button onclick="changeAlignItems('flex-start')">flex-start</button>
+                <button onclick="changeAlignItems('center')">center</button>
+                <button onclick="changeAlignItems('flex-end')">flex-end</button>
+                <button onclick="changeAlignItems('baseline')">baseline</button>
+            </div>
+
+            <div class="interactive-container-align" id="interactiveAlignContainer">
+                <div class="flex-item-align">A</div>
+                <div class="flex-item-align">B<br>Mais<br>Alto</div>
+                <div class="flex-item-align">C</div>
+            </div>
+            
+            <div class="current-value">
+                Valor atual: <span id="currentAlignValue">stretch</span>
+            </div>
+        </section>
+
+        <!-- Align-self -->
+        <section class="property-header">
+            <h2>Align-self - Alinhamento Individual</h2>
+            <p>A propriedade <strong>align-self</strong> permite sobrescrever o align-items para um item específico.</p>
+        </section>
+        
+        <section class="explanation">
+            <h3>O que é Align-self?</h3>
+            <p>A propriedade <code>align-self</code> funciona como o <code>align-items</code>, mas aplicada individualmente a cada item flex. Ela permite que um item tenha um alinhamento diferente do resto do grupo.</p>
+        </section>
+        
+        <section class="demo-section">
+            <h3>Demonstrações</h3>
+            
+            <div class="demo">
+                <h4>auto (padrão)</h4>
+                <p>Herda o valor de align-items do container</p>
+                <div class="flex-container alignself-demo" style="align-items: center;">
+                    <div class="flex-item-alignself" style="background: #ff7675; align-self: auto;">auto</div>
+                    <div class="flex-item-alignself" style="background: #74b9ff; align-self: auto;">auto</div>
+                    <div class="flex-item-alignself" style="background: #00b894; align-self: auto;">auto</div>
+                </div>
+                <code>align-self: auto;</code>
+            </div>
+            
+            <div class="demo">
+                <h4>flex-start</h4>
+                <p>Um item alinhado ao início, outros mantêm o padrão</p>
+                <div class="flex-container alignself-demo" style="align-items: center;">
+                    <div class="flex-item-alignself" style="background: #ff7675; align-self: flex-start;">flex-start</div>
+                    <div class="flex-item-alignself" style="background: #74b9ff;">center (padrão)</div>
+                    <div class="flex-item-alignself" style="background: #00b894;">center (padrão)</div>
+                </div>
+                <code>align-self: flex-start;</code>
+            </div>
+            
+            <div class="demo">
+                <h4>flex-end</h4>
+                <p>Um item alinhado ao final</p>
+                <div class="flex-container alignself-demo" style="align-items: center;">
+                    <div class="flex-item-alignself" style="background: #ff7675;">center (padrão)</div>
+                    <div class="flex-item-alignself" style="background: #74b9ff; align-self: flex-end;">flex-end</div>
+                    <div class="flex-item-alignself" style="background: #00b894;">center (padrão)</div>
+                </div>
+                <code>align-self: flex-end;</code>
+            </div>
+            
+            <div class="demo">
+                <h4>stretch</h4>
+                <p>Um item se estica individualmente</p>
+                <div class="flex-container alignself-demo" style="align-items: center;">
+                    <div class="flex-item-alignself" style="background: #ff7675;">center (padrão)</div>
+                    <div class="flex-item-alignself" style="background: #74b9ff;">center (padrão)</div>
+                    <div class="flex-item-alignself" style="background: #00b894; align-self: stretch;">stretch</div>
+                </div>
+                <code>align-self: stretch;</code>
+            </div>
+            
+            <div class="demo">
+                <h4>baseline</h4>
+                <p>Alinhamento pela linha de base do texto</p>
+                <div class="flex-container alignself-demo" style="align-items: center;">
+                    <div class="flex-item-alignself" style="background: #ff7675; font-size: 1.2em; padding: 1rem;">Texto Grande</div>
+                    <div class="flex-item-alignself" style="background: #74b9ff; align-self: baseline;">baseline</div>
+                    <div class="flex-item-alignself" style="background: #00b894; font-size: 0.8em;">Texto Pequeno</div>
+                </div>
+                <code>align-self: baseline;</code>
+            </div>
+            
+            <div class="demo">
+                <h4>Combinação</h4>
+                <p>Cada item com seu próprio alinhamento</p>
+                <div class="flex-container alignself-demo" style="align-items: flex-start;">
+                    <div class="flex-item-alignself" style="background: #ff7675; align-self: flex-end;">flex-end</div>
+                    <div class="flex-item-alignself" style="background: #74b9ff; align-self: center;">center</div>
+                    <div class="flex-item-alignself" style="background: #00b894; align-self: stretch;">stretch</div>
+                </div>
+                <code>Cada item com align-self diferente</code>
+            </div>
+        </section>
+        
+        <!-- Seção Interativa -->
+        <section class="interactive-section">
+            <h3>🎮 Experimente Align-self</h3>
+            <div class="controls controls-alignself">
+                <div class="control-group">
+                    <label>Container align-items:</label>
+                    <select id="container-align-items" onchange="updateContainerAlignItems(this.value)">
+                        <option value="stretch">stretch</option>
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="center" selected>center</option>
+                        <option value="baseline">baseline</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Item 1 align-self:</label>
+                    <select id="alignself1" onchange="updateAlignSelf(1, this.value)">
+                        <option value="auto" selected>auto</option>
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="center">center</option>
+                        <option value="baseline">baseline</option>
+                        <option value="stretch">stretch</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Item 2 align-self:</label>
+                    <select id="alignself2" onchange="updateAlignSelf(2, this.value)">
+                        <option value="auto" selected>auto</option>
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="center">center</option>
+                        <option value="baseline">baseline</option>
+                        <option value="stretch">stretch</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Item 3 align-self:</label>
+                    <select id="alignself3" onchange="updateAlignSelf(3, this.value)">
+                        <option value="auto" selected>auto</option>
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="center">center</option>
+                        <option value="baseline">baseline</option>
+                        <option value="stretch">stretch</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="flex-container alignself-demo" id="interactive-alignself" style="align-items: center;">
+                <div class="interactive-alignself-item" style="background: #ff7675;" id="alignself-item1">Item 1<br><span>auto</span></div>
+                <div class="interactive-alignself-item" style="background: #74b9ff;" id="alignself-item2">Item 2<br><span>auto</span></div>
+                <div class="interactive-alignself-item" style="background: #00b894;" id="alignself-item3">Item 3<br><span>auto</span></div>
+            </div>
+            
+            <div class="current-value">
+                <strong>💡 Dica:</strong> align-self permite que cada item tenha seu próprio alinhamento, independente do container!
+            </div>
+        </section>
+
+        <section class="property-header">
+            <h2>Align Content</h2>
+            <p>Como alinhar múltiplas linhas de itens (funciona apenas com flex-wrap)</p>
+        </section>
+
+        <section class="explanation">
+            <h3>O que é Align Content?</h3>
+            <p>A propriedade <code>align-content</code> alinha as linhas do container flex quando há múltiplas linhas (quando <code>flex-wrap: wrap</code> está ativo). Controla o espaçamento entre as linhas no eixo transversal.</p>
+        </section>
+
+        <section class="demo-section">
+            <h3>Demonstrações</h3>
+            
+            <div class="demo">
+                <h4>stretch (padrão)</h4>
+                <p>As linhas se esticam para preencher todo o espaço disponível</p>
+                <div class="flex-container-content stretch-content">
+                    <div class="flex-item-content">1</div>
+                    <div class="flex-item-content">2</div>
+                    <div class="flex-item-content">3</div>
+                    <div class="flex-item-content">4</div>
+                    <div class="flex-item-content">5</div>
+                    <div class="flex-item-content">6</div>
+                </div>
+                <code>align-content: stretch;</code>
+            </div>
+
+            <div class="demo">
+                <h4>flex-start</h4>
+                <p>Alinha as linhas no início do container</p>
+                <div class="flex-container-content flex-start-content">
+                    <div class="flex-item-content">1</div>
+                    <div class="flex-item-content">2</div>
+                    <div class="flex-item-content">3</div>
+                    <div class="flex-item-content">4</div>
+                    <div class="flex-item-content">5</div>
+                    <div class="flex-item-content">6</div>
+                </div>
+                <code>align-content: flex-start;</code>
+            </div>
+
+            <div class="demo">
+                <h4>center</h4>
+                <p>Centraliza as linhas no container</p>
+                <div class="flex-container-content center-content">
+                    <div class="flex-item-content">1</div>
+                    <div class="flex-item-content">2</div>
+                    <div class="flex-item-content">3</div>
+                    <div class="flex-item-content">4</div>
+                    <div class="flex-item-content">5</div>
+                    <div class="flex-item-content">6</div>
+                </div>
+                <code>align-content: center;</code>
+            </div>
+
+            <div class="demo">
+                <h4>flex-end</h4>
+                <p>Alinha as linhas no final do container</p>
+                <div class="flex-container-content flex-end-content">
+                    <div class="flex-item-content">1</div>
+                    <div class="flex-item-content">2</div>
+                    <div class="flex-item-content">3</div>
+                    <div class="flex-item-content">4</div>
+                    <div class="flex-item-content">5</div>
+                    <div class="flex-item-content">6</div>
+                </div>
+                <code>align-content: flex-end;</code>
+            </div>
+
+            <div class="demo">
+                <h4>space-between</h4>
+                <p>Distribui espaço igual entre as linhas</p>
+                <div class="flex-container-content space-between-content">
+                    <div class="flex-item-content">1</div>
+                    <div class="flex-item-content">2</div>
+                    <div class="flex-item-content">3</div>
+                    <div class="flex-item-content">4</div>
+                    <div class="flex-item-content">5</div>
+                    <div class="flex-item-content">6</div>
+                </div>
+                <code>align-content: space-between;</code>
+            </div>
+
+            <div class="demo">
+                <h4>space-around</h4>
+                <p>Distribui espaço igual ao redor das linhas</p>
+                <div class="flex-container-content space-around-content">
+                    <div class="flex-item-content">1</div>
+                    <div class="flex-item-content">2</div>
+                    <div class="flex-item-content">3</div>
+                    <div class="flex-item-content">4</div>
+                    <div class="flex-item-content">5</div>
+                    <div class="flex-item-content">6</div>
+                </div>
+                <code>align-content: space-around;</code>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h3>Teste Interativo</h3>
+            <p>Clique nos botões para ver como o align-content afeta múltiplas linhas:</p>
+            
+            <div class="controls">
+                <button onclick="changeAlignContent('stretch')">stretch</button>
+                <button onclick="changeAlignContent('flex-start')">flex-start</button>
+                <button onclick="changeAlignContent('center')">center</button>
+                <button onclick="changeAlignContent('flex-end')">flex-end</button>
+                <button onclick="changeAlignContent('space-between')">space-between</button>
+                <button onclick="changeAlignContent('space-around')">space-around</button>
+            </div>
+
+            <div class="interactive-container-content" id="interactiveContentContainer">
+                <div class="flex-item-content">A</div>
+                <div class="flex-item-content">B</div>
+                <div class="flex-item-content">C</div>
+                <div class="flex-item-content">D</div>
+                <div class="flex-item-content">E</div>
+                <div class="flex-item-content">F</div>
+            </div>
+            
+            <div class="current-value">
+                Valor atual: <span id="currentContentValue">stretch</span>
+            </div>
+        </section>
+
+        <section class="property-header">
+            <h2>Flex Items - Propriedades dos Filhos</h2>
+            <p>Agora vamos aprender as propriedades que aplicamos nos itens individuais</p>
+        </section>
+
+        <section class="property-header">
+            <h2>Flex Grow</h2>
+            <p>Como os itens crescem para ocupar espaço disponível</p>
+        </section>
+
+        <section class="explanation">
+            <h3>O que é Flex Grow?</h3>
+            <p>A propriedade <code>flex-grow</code> define quanto um item deve crescer em relação aos outros itens quando há espaço disponível no container. O valor padrão é <code>0</code> (não cresce).</p>
+        </section>
+
+        <section class="demo-section">
+            <h3>Demonstrações</h3>
+            
+            <div class="demo">
+                <h4>flex-grow: 0 (padrão)</h4>
+                <p>Os itens mantêm seu tamanho original, sem crescer</p>
+                <div class="flex-container-grow">
+                    <div class="flex-item-grow grow-0">Item 1<br>flex-grow: 0</div>
+                    <div class="flex-item-grow grow-0">Item 2<br>flex-grow: 0</div>
+                    <div class="flex-item-grow grow-0">Item 3<br>flex-grow: 0</div>
+                </div>
+                <code>flex-grow: 0;</code>
+            </div>
+
+            <div class="demo">
+                <h4>flex-grow: 1</h4>
+                <p>Todos os itens crescem igualmente para ocupar o espaço disponível</p>
+                <div class="flex-container-grow">
+                    <div class="flex-item-grow grow-1">Item 1<br>flex-grow: 1</div>
+                    <div class="flex-item-grow grow-1">Item 2<br>flex-grow: 1</div>
+                    <div class="flex-item-grow grow-1">Item 3<br>flex-grow: 1</div>
+                </div>
+                <code>flex-grow: 1;</code>
+            </div>
+
+            <div class="demo">
+                <h4>Valores diferentes</h4>
+                <p>Itens crescem proporcionalmente aos seus valores de flex-grow</p>
+                <div class="flex-container-grow">
+                    <div class="flex-item-grow grow-1">Item 1<br>flex-grow: 1</div>
+                    <div class="flex-item-grow grow-2">Item 2<br>flex-grow: 2</div>
+                    <div class="flex-item-grow grow-3">Item 3<br>flex-grow: 3</div>
+                </div>
+                <code>flex-grow: 1, 2, 3;</code>
+            </div>
+
+            <div class="demo">
+                <h4>Apenas um item cresce</h4>
+                <p>Apenas o item com flex-grow > 0 ocupa o espaço extra</p>
+                <div class="flex-container-grow">
+                    <div class="flex-item-grow grow-0">Item 1<br>flex-grow: 0</div>
+                    <div class="flex-item-grow grow-1">Item 2<br>flex-grow: 1</div>
+                    <div class="flex-item-grow grow-0">Item 3<br>flex-grow: 0</div>
+                </div>
+                <code>flex-grow: 0, 1, 0;</code>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h3>Teste Interativo</h3>
+            <p>Ajuste os valores de flex-grow para cada item:</p>
+            
+            <div class="controls-grow">
+                <div class="control-group">
+                    <label>Item A: <span id="valueA">1</span></label>
+                    <input type="range" id="sliderA" min="0" max="5" value="1" oninput="updateFlexGrow('A', this.value)">
+                </div>
+                <div class="control-group">
+                    <label>Item B: <span id="valueB">1</span></label>
+                    <input type="range" id="sliderB" min="0" max="5" value="1" oninput="updateFlexGrow('B', this.value)">
+                </div>
+                <div class="control-group">
+                    <label>Item C: <span id="valueC">1</span></label>
+                    <input type="range" id="sliderC" min="0" max="5" value="1" oninput="updateFlexGrow('C', this.value)">
+                </div>
+            </div>
+
+            <div class="interactive-container-grow" id="interactiveGrowContainer">
+                <div class="flex-item-grow interactive-item" id="itemA">A<br>flex-grow: <span>1</span></div>
+                <div class="flex-item-grow interactive-item" id="itemB">B<br>flex-grow: <span>1</span></div>
+                <div class="flex-item-grow interactive-item" id="itemC">C<br>flex-grow: <span>1</span></div>
+            </div>
+        </section>
+
+        <section class="property-header">
+            <h2>Flex Shrink</h2>
+            <p>Como os itens encolhem quando não há espaço suficiente</p>
+        </section>
+
+        <section class="explanation">
+            <h3>O que é Flex Shrink?</h3>
+            <p>A propriedade <code>flex-shrink</code> define quanto um item deve encolher em relação aos outros itens quando não há espaço suficiente no container. O valor padrão é <code>1</code> (encolhe normalmente).</p>
+        </section>
+
+        <section class="demo-section">
+            <h3>Demonstrações</h3>
+            
+            <div class="demo">
+                <h4>flex-shrink: 1 (padrão)</h4>
+                <p>Todos os itens encolhem igualmente quando necessário</p>
+                <div class="flex-container-shrink">
+                    <div class="flex-item-shrink shrink-1">Item muito longo 1<br>flex-shrink: 1</div>
+                    <div class="flex-item-shrink shrink-1">Item muito longo 2<br>flex-shrink: 1</div>
+                    <div class="flex-item-shrink shrink-1">Item muito longo 3<br>flex-shrink: 1</div>
+                </div>
+                <code>flex-shrink: 1;</code>
+            </div>
+
+            <div class="demo">
+                <h4>flex-shrink: 0</h4>
+                <p>Os itens não encolhem, mantêm seu tamanho original</p>
+                <div class="flex-container-shrink">
+                    <div class="flex-item-shrink shrink-0">Item longo 1<br>flex-shrink: 0</div>
+                    <div class="flex-item-shrink shrink-0">Item longo 2<br>flex-shrink: 0</div>
+                    <div class="flex-item-shrink shrink-0">Item longo 3<br>flex-shrink: 0</div>
+                </div>
+                <code>flex-shrink: 0;</code>
+            </div>
+
+            <div class="demo">
+                <h4>Valores diferentes</h4>
+                <p>Itens encolhem proporcionalmente aos seus valores de flex-shrink</p>
+                <div class="flex-container-shrink">
+                    <div class="flex-item-shrink shrink-1">Item longo 1<br>flex-shrink: 1</div>
+                    <div class="flex-item-shrink shrink-2">Item longo 2<br>flex-shrink: 2</div>
+                    <div class="flex-item-shrink shrink-3">Item longo 3<br>flex-shrink: 3</div>
+                </div>
+                <code>flex-shrink: 1, 2, 3;</code>
+            </div>
+
+            <div class="demo">
+                <h4>Apenas um não encolhe</h4>
+                <p>Apenas os itens com flex-shrink > 0 encolhem</p>
+                <div class="flex-container-shrink">
+                    <div class="flex-item-shrink shrink-1">Item longo 1<br>flex-shrink: 1</div>
+                    <div class="flex-item-shrink shrink-0">Item longo 2<br>flex-shrink: 0</div>
+                    <div class="flex-item-shrink shrink-1">Item longo 3<br>flex-shrink: 1</div>
+                </div>
+                <code>flex-shrink: 1, 0, 1;</code>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h3>Teste Interativo</h3>
+            <p>Ajuste os valores de flex-shrink para cada item (container pequeno para forçar encolhimento):</p>
+            
+            <div class="controls-shrink">
+                <div class="control-group">
+                    <label>Item A: <span id="shrinkValueA">1</span></label>
+                    <input type="range" id="shrinkSliderA" min="0" max="5" value="1" oninput="updateFlexShrink('A', this.value)">
+                </div>
+                <div class="control-group">
+                    <label>Item B: <span id="shrinkValueB">1</span></label>
+                    <input type="range" id="shrinkSliderB" min="0" max="5" value="1" oninput="updateFlexShrink('B', this.value)">
+                </div>
+                <div class="control-group">
+                    <label>Item C: <span id="shrinkValueC">1</span></label>
+                    <input type="range" id="shrinkSliderC" min="0" max="5" value="1" oninput="updateFlexShrink('C', this.value)">
+                </div>
+            </div>
+
+            <div class="interactive-container-shrink" id="interactiveShrinkContainer">
+                <div class="flex-item-shrink interactive-shrink-item" id="shrinkItemA">Item muito longo A<br>flex-shrink: <span>1</span></div>
+                <div class="flex-item-shrink interactive-shrink-item" id="shrinkItemB">Item muito longo B<br>flex-shrink: <span>1</span></div>
+                <div class="flex-item-shrink interactive-shrink-item" id="shrinkItemC">Item muito longo C<br>flex-shrink: <span>1</span></div>
+            </div>
+        </section>
+
+        <section class="property-header">
+            <h2>Flex Basis</h2>
+            <p>Define o tamanho inicial dos itens antes da distribuição do espaço</p>
+        </section>
+
+        <section class="explanation">
+            <h3>O que é Flex Basis?</h3>
+            <p>A propriedade <code>flex-basis</code> define o tamanho inicial de um item antes do espaço restante ser distribuído. É como definir uma largura base, mas específica para flexbox. O valor padrão é <code>auto</code>.</p>
+        </section>
+
+        <section class="demo-section">
+            <h3>Demonstrações</h3>
+            
+            <div class="demo">
+                <h4>flex-basis: auto (padrão)</h4>
+                <p>O tamanho é baseado no conteúdo do item</p>
+                <div class="flex-container-basis">
+                    <div class="flex-item-basis basis-auto">Item A<br>flex-basis: auto</div>
+                    <div class="flex-item-basis basis-auto">Item B com mais conteúdo<br>flex-basis: auto</div>
+                    <div class="flex-item-basis basis-auto">Item C<br>flex-basis: auto</div>
+                </div>
+                <code>flex-basis: auto;</code>
+            </div>
+
+            <div class="demo">
+                <h4>flex-basis: 0</h4>
+                <p>Ignora o conteúdo, todos começam do tamanho zero</p>
+                <div class="flex-container-basis">
+                    <div class="flex-item-basis basis-0">Item A<br>flex-basis: 0</div>
+                    <div class="flex-item-basis basis-0">Item B com mais conteúdo<br>flex-basis: 0</div>
+                    <div class="flex-item-basis basis-0">Item C<br>flex-basis: 0</div>
+                </div>
+                <code>flex-basis: 0;</code>
+            </div>
+
+            <div class="demo">
+                <h4>flex-basis: valores fixos</h4>
+                <p>Define tamanhos específicos em pixels</p>
+                <div class="flex-container-basis">
+                    <div class="flex-item-basis basis-100">Item A<br>flex-basis: 100px</div>
+                    <div class="flex-item-basis basis-150">Item B<br>flex-basis: 150px</div>
+                    <div class="flex-item-basis basis-200">Item C<br>flex-basis: 200px</div>
+                </div>
+                <code>flex-basis: 100px, 150px, 200px;</code>
+            </div>
+
+            <div class="demo">
+                <h4>flex-basis: porcentagens</h4>
+                <p>Define tamanhos como porcentagem do container</p>
+                <div class="flex-container-basis">
+                    <div class="flex-item-basis basis-20">Item A<br>flex-basis: 20%</div>
+                    <div class="flex-item-basis basis-30">Item B<br>flex-basis: 30%</div>
+                    <div class="flex-item-basis basis-50">Item C<br>flex-basis: 50%</div>
+                </div>
+                <code>flex-basis: 20%, 30%, 50%;</code>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h3>Teste Interativo</h3>
+            <p>Ajuste os valores de flex-basis para cada item:</p>
+            
+            <div class="controls-basis">
+                <div class="control-group">
+                    <label>Item A: <span id="basisValueA">auto</span></label>
+                    <select id="basisSelectA" onchange="updateFlexBasis('A', this.value)">
+                        <option value="auto">auto</option>
+                        <option value="0">0</option>
+                        <option value="50px">50px</option>
+                        <option value="100px">100px</option>
+                        <option value="150px">150px</option>
+                        <option value="200px">200px</option>
+                        <option value="20%">20%</option>
+                        <option value="30%">30%</option>
+                        <option value="50%">50%</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Item B: <span id="basisValueB">auto</span></label>
+                    <select id="basisSelectB" onchange="updateFlexBasis('B', this.value)">
+                        <option value="auto">auto</option>
+                        <option value="0">0</option>
+                        <option value="50px">50px</option>
+                        <option value="100px">100px</option>
+                        <option value="150px">150px</option>
+                        <option value="200px">200px</option>
+                        <option value="20%">20%</option>
+                        <option value="30%">30%</option>
+                        <option value="50%">50%</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Item C: <span id="basisValueC">auto</span></label>
+                    <select id="basisSelectC" onchange="updateFlexBasis('C', this.value)">
+                        <option value="auto">auto</option>
+                        <option value="0">0</option>
+                        <option value="50px">50px</option>
+                        <option value="100px">100px</option>
+                        <option value="150px">150px</option>
+                        <option value="200px">200px</option>
+                        <option value="20%">20%</option>
+                        <option value="30%">30%</option>
+                        <option value="50%">50%</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="interactive-container-basis" id="interactiveBasisContainer">
+                <div class="flex-item-basis interactive-basis-item" id="basisItemA">Item A<br>flex-basis: <span>auto</span></div>
+                <div class="flex-item-basis interactive-basis-item" id="basisItemB">Item B com mais conteúdo<br>flex-basis: <span>auto</span></div>
+                <div class="flex-item-basis interactive-basis-item" id="basisItemC">Item C<br>flex-basis: <span>auto</span></div>
+            </div>
+        </section>
+
+        <section class="property-header">
+            <h2>Flex Shorthand</h2>
+            <p>Combina flex-grow, flex-shrink e flex-basis em uma única propriedade</p>
+        </section>
+
+        <section class="explanation">
+            <h3>O que é Flex Shorthand?</h3>
+            <p>A propriedade <code>flex</code> é um shorthand que combina <code>flex-grow</code>, <code>flex-shrink</code> e <code>flex-basis</code> em uma única declaração. Sintaxe: <code>flex: grow shrink basis</code>. É a forma mais comum de trabalhar com flexbox.</p>
+        </section>
+
+        <section class="demo-section">
+            <h3>Demonstrações</h3>
+            
+            <div class="demo">
+                <h4>flex: initial (padrão)</h4>
+                <p>Equivale a flex: 0 1 auto - não cresce, encolhe, tamanho baseado no conteúdo</p>
+                <div class="flex-container-flex">
+                    <div class="flex-item-flex flex-initial">Item A<br>flex: initial</div>
+                    <div class="flex-item-flex flex-initial">Item B com mais conteúdo<br>flex: initial</div>
+                    <div class="flex-item-flex flex-initial">Item C<br>flex: initial</div>
+                </div>
+                <code>flex: initial; /* 0 1 auto */</code>
+            </div>
+
+            <div class="demo">
+                <h4>flex: 1</h4>
+                <p>Equivale a flex: 1 1 0 - todos os itens crescem igualmente</p>
+                <div class="flex-container-flex">
+                    <div class="flex-item-flex flex-1">Item A<br>flex: 1</div>
+                    <div class="flex-item-flex flex-1">Item B com mais conteúdo<br>flex: 1</div>
+                    <div class="flex-item-flex flex-1">Item C<br>flex: 1</div>
+                </div>
+                <code>flex: 1; /* 1 1 0 */</code>
+            </div>
+
+            <div class="demo">
+                <h4>flex: auto</h4>
+                <p>Equivale a flex: 1 1 auto - cresce e encolhe, tamanho baseado no conteúdo</p>
+                <div class="flex-container-flex">
+                    <div class="flex-item-flex flex-auto">Item A<br>flex: auto</div>
+                    <div class="flex-item-flex flex-auto">Item B com mais conteúdo<br>flex: auto</div>
+                    <div class="flex-item-flex flex-auto">Item C<br>flex: auto</div>
+                </div>
+                <code>flex: auto; /* 1 1 auto */</code>
+            </div>
+
+            <div class="demo">
+                <h4>flex: none</h4>
+                <p>Equivale a flex: 0 0 auto - não cresce nem encolhe, tamanho fixo</p>
+                <div class="flex-container-flex">
+                    <div class="flex-item-flex flex-none">Item A<br>flex: none</div>
+                    <div class="flex-item-flex flex-none">Item B com mais conteúdo<br>flex: none</div>
+                    <div class="flex-item-flex flex-none">Item C<br>flex: none</div>
+                </div>
+                <code>flex: none; /* 0 0 auto */</code>
+            </div>
+
+            <div class="demo">
+                <h4>Valores personalizados</h4>
+                <p>Combinações específicas de grow, shrink e basis</p>
+                <div class="flex-container-flex">
+                    <div class="flex-item-flex flex-custom-1">Item A<br>flex: 2 1 100px</div>
+                    <div class="flex-item-flex flex-custom-2">Item B<br>flex: 1 2 150px</div>
+                    <div class="flex-item-flex flex-custom-3">Item C<br>flex: 3 1 50px</div>
+                </div>
+                <code>flex: 2 1 100px, 1 2 150px, 3 1 50px;</code>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h3>Teste Interativo</h3>
+            <p>Escolha valores predefinidos de flex para cada item:</p>
+            
+            <div class="controls-flex">
+                <div class="control-group">
+                    <label>Item A: <span id="flexValueA">1</span></label>
+                    <select id="flexSelectA" onchange="updateFlex('A', this.value, this.options[this.selectedIndex].text)">
+                        <option value="initial">initial (0 1 auto)</option>
+                        <option value="1" selected>1 (1 1 0)</option>
+                        <option value="auto">auto (1 1 auto)</option>
+                        <option value="none">none (0 0 auto)</option>
+                        <option value="2">2 (2 1 0)</option>
+                        <option value="0">0 (0 1 0)</option>
+                        <option value="1 0 auto">1 0 auto</option>
+                        <option value="2 1 100px">2 1 100px</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Item B: <span id="flexValueB">1</span></label>
+                    <select id="flexSelectB" onchange="updateFlex('B', this.value, this.options[this.selectedIndex].text)">
+                        <option value="initial">initial (0 1 auto)</option>
+                        <option value="1" selected>1 (1 1 0)</option>
+                        <option value="auto">auto (1 1 auto)</option>
+                        <option value="none">none (0 0 auto)</option>
+                        <option value="2">2 (2 1 0)</option>
+                        <option value="0">0 (0 1 0)</option>
+                        <option value="1 0 auto">1 0 auto</option>
+                        <option value="2 1 100px">2 1 100px</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Item C: <span id="flexValueC">1</span></label>
+                    <select id="flexSelectC" onchange="updateFlex('C', this.value, this.options[this.selectedIndex].text)">
+                        <option value="initial">initial (0 1 auto)</option>
+                        <option value="1" selected>1 (1 1 0)</option>
+                        <option value="auto">auto (1 1 auto)</option>
+                        <option value="none">none (0 0 auto)</option>
+                        <option value="2">2 (2 1 0)</option>
+                        <option value="0">0 (0 1 0)</option>
+                        <option value="1 0 auto">1 0 auto</option>
+                        <option value="2 1 100px">2 1 100px</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="interactive-container-flex" id="interactiveFlexContainer">
+                <div class="flex-item-flex interactive-flex-item" id="flexItemA">Item A<br>flex: <span>1</span></div>
+                <div class="flex-item-flex interactive-flex-item" id="flexItemB">Item B com mais conteúdo<br>flex: <span>1</span></div>
+                <div class="flex-item-flex interactive-flex-item" id="flexItemC">Item C<br>flex: <span>1</span></div>
+            </div>
+        </section>
+
+        <section class="property-header">
+            <h2>Order - Ordem Visual (Avançado)</h2>
+            <p>Controla a ordem visual dos itens sem alterar o HTML - propriedade mais avançada</p>
+        </section>
+
+        <section class="explanation">
+            <h3>O que é Order?</h3>
+            <p>A propriedade <code>order</code> permite alterar a ordem visual dos itens flex sem modificar a estrutura HTML. É uma das propriedades mais avançadas do Flexbox, especialmente útil para layouts responsivos. O valor padrão é <code>0</code>. Itens com valores menores aparecem primeiro.</p>
+        </section>
+
+        <section class="demo-section">
+            <h3>Demonstrações</h3>
+            
+            <div class="demo">
+                <h4>order: 0 (padrão)</h4>
+                <p>Todos os itens mantêm a ordem original do HTML</p>
+                <div class="flex-container-order">
+                    <div class="flex-item-order order-0">Primeiro<br>order: 0</div>
+                    <div class="flex-item-order order-0">Segundo<br>order: 0</div>
+                    <div class="flex-item-order order-0">Terceiro<br>order: 0</div>
+                </div>
+                <code>order: 0; (todos)</code>
+            </div>
+
+            <div class="demo">
+                <h4>Reordenação simples</h4>
+                <p>Alterando a ordem com valores positivos</p>
+                <div class="flex-container-order">
+                    <div class="flex-item-order order-2">Primeiro no HTML<br>order: 2</div>
+                    <div class="flex-item-order order-1">Segundo no HTML<br>order: 1</div>
+                    <div class="flex-item-order order-3">Terceiro no HTML<br>order: 3</div>
+                </div>
+                <code>order: 2, 1, 3;</code>
+            </div>
+
+            <div class="demo">
+                <h4>Usando valores negativos</h4>
+                <p>Valores negativos movem itens para o início</p>
+                <div class="flex-container-order">
+                    <div class="flex-item-order order-0">Primeiro<br>order: 0</div>
+                    <div class="flex-item-order order-minus1">Segundo<br>order: -1</div>
+                    <div class="flex-item-order order-1">Terceiro<br>order: 1</div>
+                </div>
+                <code>order: 0, -1, 1;</code>
+            </div>
+
+            <div class="demo">
+                <h4>Caso prático: Layout responsivo</h4>
+                <p>Reorganizando elementos para mobile (sidebar por último)</p>
+                <div class="flex-container-order responsive-demo">
+                    <div class="flex-item-order header-item">Header<br>order: 1</div>
+                    <div class="flex-item-order sidebar-item">Sidebar<br>order: 3</div>
+                    <div class="flex-item-order content-item">Content<br>order: 2</div>
+                </div>
+                <code>Header: 1, Sidebar: 3, Content: 2</code>
+            </div>
+        </section>
+
+        <section class="interactive-section">
+            <h3>Teste Interativo</h3>
+            <p>Ajuste a ordem de cada item (valores de -3 a 3):</p>
+            
+            <div class="controls-order">
+                <div class="control-group">
+                    <label>Item A (Primeiro no HTML): <span id="orderValueA">0</span></label>
+                    <input type="range" id="orderSliderA" min="-3" max="3" value="0" oninput="updateOrder('A', this.value)">
+                </div>
+                <div class="control-group">
+                    <label>Item B (Segundo no HTML): <span id="orderValueB">0</span></label>
+                    <input type="range" id="orderSliderB" min="-3" max="3" value="0" oninput="updateOrder('B', this.value)">
+                </div>
+                <div class="control-group">
+                    <label>Item C (Terceiro no HTML): <span id="orderValueC">0</span></label>
+                    <input type="range" id="orderSliderC" min="-3" max="3" value="0" oninput="updateOrder('C', this.value)">
+                </div>
+            </div>
+
+            <div class="interactive-container-order" id="interactiveOrderContainer">
+                <div class="flex-item-order interactive-order-item" id="orderItemA">Item A<br>(Primeiro no HTML)<br>order: <span>0</span></div>
+                <div class="flex-item-order interactive-order-item" id="orderItemB">Item B<br>(Segundo no HTML)<br>order: <span>0</span></div>
+                <div class="flex-item-order interactive-order-item" id="orderItemC">Item C<br>(Terceiro no HTML)<br>order: <span>0</span></div>
+            </div>
+            
+            <div class="order-explanation">
+                <strong>💡 Dica Avançada:</strong> Order é perfeito para layouts responsivos onde você precisa reordenar elementos sem alterar o HTML!
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function changeJustifyContent(value) {
+            const container = document.getElementById('interactiveContainer');
+            const currentValueSpan = document.getElementById('currentValue');
+            
+            container.style.justifyContent = value;
+            currentValueSpan.textContent = value;
+        }
+
+        function changeFlexDirection(value) {
+            const container = document.getElementById('interactiveDirectionContainer');
+            const currentValueSpan = document.getElementById('currentDirectionValue');
+            
+            container.style.flexDirection = value;
+            currentValueSpan.textContent = value;
+        }
+
+        function changeFlexWrap(value) {
+            const container = document.getElementById('interactiveWrapContainer');
+            const currentValueSpan = document.getElementById('currentWrapValue');
+            
+            container.style.flexWrap = value;
+            currentValueSpan.textContent = value;
+        }
+
+        function changeAlignItems(value) {
+            const container = document.getElementById('interactiveAlignContainer');
+            const currentValueSpan = document.getElementById('currentAlignValue');
+            
+            container.style.alignItems = value;
+            currentValueSpan.textContent = value;
+        }
+
+        function changeAlignContent(value) {
+            const container = document.getElementById('interactiveContentContainer');
+            const currentValueSpan = document.getElementById('currentContentValue');
+            
+            container.style.alignContent = value;
+            currentValueSpan.textContent = value;
+        }
+
+        function updateFlexGrow(item, value) {
+            const element = document.getElementById('item' + item);
+            const valueSpan = document.getElementById('value' + item);
+            const itemSpan = element.querySelector('span');
+            
+            element.style.flexGrow = value;
+            valueSpan.textContent = value;
+            itemSpan.textContent = value;
+        }
+
+        function updateFlexShrink(item, value) {
+            const element = document.getElementById('shrinkItem' + item);
+            const valueSpan = document.getElementById('shrinkValue' + item);
+            const itemSpan = element.querySelector('span');
+            
+            element.style.flexShrink = value;
+            valueSpan.textContent = value;
+            itemSpan.textContent = value;
+        }
+
+        function updateFlexBasis(item, value) {
+            const element = document.getElementById('basisItem' + item);
+            const valueSpan = document.getElementById('basisValue' + item);
+            const itemSpan = element.querySelector('span');
+            
+            element.style.flexBasis = value;
+            valueSpan.textContent = value;
+            itemSpan.textContent = value;
+        }
+
+        function updateFlex(item, value, displayText) {
+            const element = document.getElementById('flexItem' + item);
+            const valueSpan = document.getElementById('flexValue' + item);
+            const itemSpan = element.querySelector('span');
+            
+            element.style.flex = value;
+            valueSpan.textContent = displayText;
+            itemSpan.textContent = displayText;
+        }
+
+        function updateOrder(item, value) {
+            const element = document.getElementById('orderItem' + item);
+            const valueSpan = document.getElementById('orderValue' + item);
+            const itemSpan = element.querySelector('span');
+            
+            element.style.order = value;
+            valueSpan.textContent = value;
+            itemSpan.textContent = value;
+        }
+
+        function updateContainerAlignItems(value) {
+            const container = document.getElementById('interactive-alignself');
+            container.style.alignItems = value;
+        }
+
+        function updateAlignSelf(item, value) {
+            const element = document.getElementById('alignself-item' + item);
+            const itemSpan = element.querySelector('span');
+            
+            element.style.alignSelf = value;
+            itemSpan.textContent = value;
+        }
+    </script>
+</body>
+</html>

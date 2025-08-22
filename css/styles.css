@@ -1,0 +1,2215 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+header code {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Property header */
+.property-header {
+    background: #f8f9fa;
+    color: #495057;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #6c757d;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.property-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #495057;
+}
+
+.property-header p {
+    font-size: 1rem;
+    opacity: 0.8;
+    color: #6c757d;
+}
+
+/* Seções especiais */
+
+.explanation {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.explanation h3 {
+    color: #495057;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.explanation code {
+    background-color: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #e83e8c;
+}
+
+/* Comparison section */
+.comparison-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.comparison-section h3 {
+    color: #667eea;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.comparison-item h4 {
+    color: #495057;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.comparison-item p {
+    color: #6c757d;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.comparison-item code {
+    display: inline-block;
+    background-color: #343a40;
+    color: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+/* Containers para comparação */
+.container-normal {
+    background-color: #fff3cd;
+    border: 2px dashed #ffc107;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    min-height: 200px;
+    position: relative;
+}
+
+.container-normal::before {
+    content: 'Display: Block';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: #fff3cd;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: #856404;
+    font-weight: bold;
+}
+
+.container-flex {
+    display: flex;
+    background-color: #d1ecf1;
+    border: 2px dashed #17a2b8;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    min-height: 100px;
+    position: relative;
+}
+
+.container-flex::before {
+    content: 'Display: Flex';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: #d1ecf1;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: #0c5460;
+    font-weight: bold;
+}
+
+/* Items para comparação */
+.item-normal {
+    background: linear-gradient(135deg, #ffc107, #fd7e14);
+    color: white;
+    width: 80px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.item-flex {
+    background: linear-gradient(135deg, #17a2b8, #20c997);
+    color: white;
+    width: 80px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-right: 10px;
+}
+
+.item-flex:last-child {
+    margin-right: 0;
+}
+
+/* Concepts section */
+.concepts-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.concepts-section h3 {
+    color: #667eea;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.concepts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.concept-card {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    transition: transform 0.3s ease;
+}
+
+.concept-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.concept-card h4 {
+    color: #495057;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.concept-card p {
+    color: #6c757d;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.concept-card code {
+    background-color: #e9ecef;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #495057;
+    font-size: 0.85rem;
+}
+
+/* Demo sections */
+.demo-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.demo-section h3 {
+    color: #667eea;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.demo {
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+.demo h3 {
+    color: #495057;
+    margin-bottom: 0.5rem;
+}
+
+.demo p {
+    margin-bottom: 1rem;
+    color: #6c757d;
+}
+
+.demo code {
+    display: inline-block;
+    background-color: #343a40;
+    color: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Flex containers */
+.flex-container {
+    display: flex;
+    background-color: #e9ecef;
+    border: 2px dashed #adb5bd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    min-height: 100px;
+    position: relative;
+}
+
+.flex-container::before {
+    content: 'Container Flex';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: #e9ecef;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Flex items - os 3 quadrados */
+.flex-item {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.flex-item:hover {
+    transform: translateY(-2px);
+}
+
+.flex-item:nth-child(2) {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+}
+
+.flex-item:nth-child(3) {
+    background: linear-gradient(135deg, #45b7d1, #96c93d);
+}
+
+/* Classes para diferentes valores de justify-content */
+.flex-start {
+    justify-content: flex-start;
+}
+
+.center {
+    justify-content: center;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+/* Seção interativa */
+.interactive-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.interactive-section h3 {
+    color: #667eea;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.controls button {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.controls button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.controls button:active {
+    transform: translateY(0);
+}
+
+.interactive-container {
+    display: flex;
+    background-color: #e9ecef;
+    border: 3px solid #667eea;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    min-height: 120px;
+    justify-content: flex-start;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.interactive-container::before {
+    content: 'Container Interativo';
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: #667eea;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.current-value {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #495057;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 6px;
+    border-left: 4px solid #667eea;
+}
+
+.current-value span {
+    font-family: 'Courier New', monospace;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* Flex Direction Containers */
+.flex-container-direction {
+    display: flex;
+    background-color: #e9ecef;
+    border: 2px dashed #adb5bd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    min-height: 120px;
+    position: relative;
+}
+
+.flex-container-direction::before {
+    content: 'Container Flex Direction';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: #e9ecef;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Flex Direction Items */
+.flex-item-direction {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    color: white;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin: 5px;
+}
+
+.flex-item-direction:hover {
+    transform: scale(1.05);
+}
+
+.flex-item-direction:nth-child(2) {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+}
+
+.flex-item-direction:nth-child(3) {
+    background: linear-gradient(135deg, #45b7d1, #96c93d);
+}
+
+/* Direction Classes */
+.row {
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.column {
+    flex-direction: column;
+    min-height: 280px;
+    align-items: center;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+    min-height: 280px;
+    align-items: center;
+}
+
+/* Interactive Direction Container */
+.interactive-container-direction {
+    display: flex;
+    background-color: #e9ecef;
+    border: 3px solid #28a745;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    min-height: 120px;
+    flex-direction: row;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.interactive-container-direction::before {
+    content: 'Container Flex Direction Interativo';
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: #28a745;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Flex Wrap Containers */
+.flex-container-wrap {
+    display: flex;
+    background-color: #e9ecef;
+    border: 2px dashed #adb5bd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    min-height: 120px;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.flex-container-wrap::before {
+    content: 'Container Flex Wrap';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: #e9ecef;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Flex Wrap Items */
+.flex-item-wrap {
+    background: linear-gradient(135deg, #fd79a8, #e84393);
+    color: white;
+    min-width: 100px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin: 3px;
+    flex-shrink: 0;
+}
+
+.flex-item-wrap:hover {
+    transform: translateY(-2px);
+}
+
+.flex-item-wrap:nth-child(2n) {
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+}
+
+.flex-item-wrap:nth-child(3n) {
+    background: linear-gradient(135deg, #55a3ff, #2d3436);
+}
+
+.flex-item-wrap:nth-child(4n) {
+    background: linear-gradient(135deg, #fd79a8, #fdcb6e);
+}
+
+.flex-item-wrap:nth-child(5n) {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+}
+
+.flex-item-wrap:nth-child(6n) {
+    background: linear-gradient(135deg, #00b894, #00cec9);
+}
+
+/* Wrap Classes */
+.nowrap-demo {
+    flex-wrap: nowrap;
+}
+
+.wrap-demo {
+    flex-wrap: wrap;
+    min-height: 140px;
+}
+
+.wrap-reverse-demo {
+    flex-wrap: wrap-reverse;
+    min-height: 140px;
+}
+
+/* Interactive Wrap Container */
+.interactive-container-wrap {
+    display: flex;
+    background-color: #e9ecef;
+    border: 3px solid #fd79a8;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    min-height: 120px;
+    flex-wrap: nowrap;
+    transition: all 0.5s ease;
+    position: relative;
+    max-width: 500px;
+}
+
+.interactive-container-wrap::before {
+    content: 'Container Flex Wrap Interativo';
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: #fd79a8;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Align Items Containers */
+.flex-container-align {
+    display: flex;
+    background-color: #e9ecef;
+    border: 2px dashed #adb5bd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    min-height: 150px;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.flex-container-align::before {
+    content: 'Container Align Items';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: #e9ecef;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Align Items */
+.flex-item-align {
+    background: linear-gradient(135deg, #00b894, #00cec9);
+    color: white;
+    min-width: 100px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin: 0 5px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.flex-item-align:hover {
+    transform: scale(1.05);
+}
+
+.flex-item-align:nth-child(2) {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+}
+
+.flex-item-align:nth-child(3) {
+    background: linear-gradient(135deg, #fd79a8, #e84393);
+}
+
+/* Different text sizes for baseline demo */
+.small-text {
+    font-size: 0.8rem;
+}
+
+.medium-text {
+    font-size: 1rem;
+}
+
+.large-text {
+    font-size: 1.4rem;
+}
+
+/* Align Classes */
+.stretch-demo {
+    align-items: stretch;
+}
+
+.flex-start-align {
+    align-items: flex-start;
+}
+
+.center-align {
+    align-items: center;
+}
+
+.flex-end-align {
+    align-items: flex-end;
+}
+
+.baseline-align {
+    align-items: baseline;
+}
+
+/* Interactive Align Container */
+.interactive-container-align {
+    display: flex;
+    background-color: #e9ecef;
+    border: 3px solid #00b894;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    min-height: 150px;
+    align-items: stretch;
+    transition: all 0.5s ease;
+    position: relative;
+    max-width: 500px;
+}
+
+.interactive-container-align::before {
+    content: 'Container Align Items Interativo';
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: #00b894;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Align Content Containers */
+.flex-container-content {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e9ecef;
+    border: 2px dashed #adb5bd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    min-height: 200px;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.flex-container-content::before {
+    content: 'Container Align Content (wrap ativo)';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: #e9ecef;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Align Content Items */
+.flex-item-content {
+    background: linear-gradient(135deg, #e17055, #d63031);
+    color: white;
+    width: 80px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    margin: 3px;
+    flex-shrink: 0;
+}
+
+.flex-item-content:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.flex-item-content:nth-child(2n) {
+    background: linear-gradient(135deg, #fd79a8, #e84393);
+}
+
+.flex-item-content:nth-child(3n) {
+    background: linear-gradient(135deg, #fdcb6e, #e17055);
+}
+
+.flex-item-content:nth-child(4n) {
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+}
+
+.flex-item-content:nth-child(5n) {
+    background: linear-gradient(135deg, #74b9ff, #0984e3);
+}
+
+.flex-item-content:nth-child(6n) {
+    background: linear-gradient(135deg, #00b894, #00cec9);
+}
+
+/* Align Content Classes */
+.stretch-content {
+    align-content: stretch;
+}
+
+.flex-start-content {
+    align-content: flex-start;
+}
+
+.center-content {
+    align-content: center;
+}
+
+.flex-end-content {
+    align-content: flex-end;
+}
+
+.space-between-content {
+    align-content: space-between;
+}
+
+.space-around-content {
+    align-content: space-around;
+}
+
+/* Interactive Align Content Container */
+.interactive-container-content {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e9ecef;
+    border: 3px solid #e17055;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    min-height: 200px;
+    align-content: stretch;
+    transition: all 0.5s ease;
+    position: relative;
+    max-width: 400px;
+}
+
+.interactive-container-content::before {
+    content: 'Container Align Content Interativo';
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: #e17055;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Flex Grow Containers */
+.flex-container-grow {
+    display: flex;
+    background-color: #e9ecef;
+    border: 2px dashed #adb5bd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    min-height: 80px;
+    position: relative;
+    width: 100%;
+}
+
+.flex-container-grow::before {
+    content: 'Container Flex Grow';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: #e9ecef;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Flex Grow Items */
+.flex-item-grow {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    color: white;
+    min-width: 100px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    margin: 0 3px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.flex-item-grow:hover {
+    box-shadow: 0 5px 12px rgba(155, 89, 182, 0.4);
+}
+
+/* Flex Grow Values */
+.grow-0 {
+    flex-grow: 0;
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+
+.grow-1 {
+    flex-grow: 1;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.grow-2 {
+    flex-grow: 2;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.grow-3 {
+    flex-grow: 3;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+/* Interactive Flex Grow Container */
+.interactive-container-grow {
+    display: flex;
+    background-color: #e9ecef;
+    border: 3px solid #9b59b6;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    min-height: 100px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.interactive-container-grow::before {
+    content: 'Container Flex Grow Interativo';
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: #9b59b6;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.interactive-item {
+    flex-grow: 1;
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    margin: 0 5px;
+}
+
+/* Controls for Flex Grow */
+.controls-grow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #9b59b6;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.control-group label {
+    font-weight: bold;
+    color: #495057;
+    font-size: 0.9rem;
+}
+
+.control-group input[type="range"] {
+    width: 120px;
+    height: 6px;
+    border-radius: 3px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.control-group input[type="range"]:hover {
+    opacity: 1;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #9b59b6;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(155, 89, 182, 0.3);
+}
+
+.control-group input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #9b59b6;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(155, 89, 182, 0.3);
+}
+
+/* Flex Shrink Containers */
+.flex-container-shrink {
+    display: flex;
+    background-color: #e9ecef;
+    border: 2px dashed #adb5bd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    min-height: 80px;
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.flex-container-shrink::before {
+    content: 'Container Flex Shrink (espaço limitado)';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: #e9ecef;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Flex Shrink Items */
+.flex-item-shrink {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    min-width: 150px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    margin: 0 3px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.flex-item-shrink:hover {
+    box-shadow: 0 5px 12px rgba(231, 76, 60, 0.4);
+}
+
+/* Flex Shrink Values */
+.shrink-0 {
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+
+.shrink-1 {
+    flex-shrink: 1;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.shrink-2 {
+    flex-shrink: 2;
+    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+}
+
+.shrink-3 {
+    flex-shrink: 3;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+/* Interactive Flex Shrink Container */
+.interactive-container-shrink {
+    display: flex;
+    background-color: #e9ecef;
+    border: 3px solid #e74c3c;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    min-height: 100px;
+    transition: all 0.5s ease;
+    position: relative;
+    max-width: 350px;
+}
+
+.interactive-container-shrink::before {
+    content: 'Container Flex Shrink Interativo (350px)';
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: #e74c3c;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.interactive-shrink-item {
+    flex-shrink: 1;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    margin: 0 2px;
+    min-width: 140px;
+}
+
+/* Controls for Flex Shrink */
+.controls-shrink {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #e74c3c;
+}
+
+.controls-shrink .control-group input[type="range"]::-webkit-slider-thumb {
+    background: #e74c3c;
+    box-shadow: 0 2px 6px rgba(231, 76, 60, 0.3);
+}
+
+.controls-shrink .control-group input[type="range"]::-moz-range-thumb {
+    background: #e74c3c;
+    box-shadow: 0 2px 6px rgba(231, 76, 60, 0.3);
+}
+
+/* Flex Basis Containers */
+.flex-container-basis {
+    display: flex;
+    background-color: #e9ecef;
+    border: 2px dashed #adb5bd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    min-height: 80px;
+    position: relative;
+    width: 100%;
+}
+
+.flex-container-basis::before {
+    content: 'Container Flex Basis';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: #e9ecef;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Flex Basis Items */
+.flex-item-basis {
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    margin: 0 3px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.flex-item-basis:hover {
+    box-shadow: 0 5px 12px rgba(39, 174, 96, 0.4);
+}
+
+/* Flex Basis Values */
+.basis-auto {
+    flex-basis: auto;
+}
+
+.basis-0 {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.basis-100 {
+    flex-basis: 100px;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.basis-150 {
+    flex-basis: 150px;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.basis-200 {
+    flex-basis: 200px;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.basis-20 {
+    flex-basis: 20%;
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.basis-30 {
+    flex-basis: 30%;
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.basis-50 {
+    flex-basis: 50%;
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+/* Interactive Flex Basis Container */
+.interactive-container-basis {
+    display: flex;
+    background-color: #e9ecef;
+    border: 3px solid #27ae60;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    min-height: 100px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.interactive-container-basis::before {
+    content: 'Container Flex Basis Interativo';
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: #27ae60;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.interactive-basis-item {
+    flex-basis: auto;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+    margin: 0 3px;
+}
+
+/* Controls for Flex Basis */
+.controls-basis {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #27ae60;
+}
+
+.controls-basis .control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.controls-basis .control-group label {
+    font-weight: bold;
+    color: #495057;
+    font-size: 0.9rem;
+}
+
+.controls-basis .control-group select {
+    padding: 8px 12px;
+    border: 2px solid #27ae60;
+    border-radius: 6px;
+    background-color: white;
+    color: #495057;
+    font-size: 0.9rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    min-width: 100px;
+}
+
+.controls-basis .control-group select:hover {
+    border-color: #2ecc71;
+    box-shadow: 0 2px 8px rgba(39, 174, 96, 0.2);
+}
+
+.controls-basis .control-group select:focus {
+    border-color: #2ecc71;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+/* Flex Shorthand Containers */
+.flex-container-flex {
+    display: flex;
+    background-color: #e9ecef;
+    border: 2px dashed #adb5bd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    min-height: 80px;
+    position: relative;
+    width: 100%;
+}
+
+.flex-container-flex::before {
+    content: 'Container Flex Shorthand';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: #e9ecef;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Flex Shorthand Items */
+.flex-item-flex {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    margin: 0 3px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.flex-item-flex:hover {
+    box-shadow: 0 5px 12px rgba(243, 156, 18, 0.4);
+}
+
+/* Flex Shorthand Values */
+.flex-initial {
+    flex: initial; /* 0 1 auto */
+    background: linear-gradient(135deg, #95a5a6, #7f8c8d);
+}
+
+.flex-1 {
+    flex: 1; /* 1 1 0 */
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.flex-auto {
+    flex: auto; /* 1 1 auto */
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+.flex-none {
+    flex: none; /* 0 0 auto */
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.flex-custom-1 {
+    flex: 2 1 100px;
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+}
+
+.flex-custom-2 {
+    flex: 1 2 150px;
+    background: linear-gradient(135deg, #1abc9c, #16a085);
+}
+
+.flex-custom-3 {
+    flex: 3 1 50px;
+    background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+/* Interactive Flex Container */
+.interactive-container-flex {
+    display: flex;
+    background-color: #e9ecef;
+    border: 3px solid #f39c12;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    min-height: 100px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.interactive-container-flex::before {
+    content: 'Container Flex Shorthand Interativo';
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: #f39c12;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.interactive-flex-item {
+    flex: 1;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    margin: 0 3px;
+}
+
+/* Controls for Flex Shorthand */
+.controls-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #f39c12;
+}
+
+.controls-flex .control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.controls-flex .control-group label {
+    font-weight: bold;
+    color: #495057;
+    font-size: 0.9rem;
+}
+
+.controls-flex .control-group select {
+    padding: 8px 12px;
+    border: 2px solid #f39c12;
+    border-radius: 6px;
+    background-color: white;
+    color: #495057;
+    font-size: 0.85rem;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+    min-width: 140px;
+}
+
+.controls-flex .control-group select:hover {
+    border-color: #e67e22;
+    box-shadow: 0 2px 8px rgba(243, 156, 18, 0.2);
+}
+
+.controls-flex .control-group select:focus {
+    border-color: #e67e22;
+    box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+}
+
+/* Order Containers */
+.flex-container-order {
+    display: flex;
+    background-color: #e9ecef;
+    border: 2px dashed #adb5bd;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    min-height: 80px;
+    position: relative;
+    width: 100%;
+}
+
+.flex-container-order::before {
+    content: 'Container Order';
+    position: absolute;
+    top: -12px;
+    left: 10px;
+    background-color: #e9ecef;
+    padding: 0 8px;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Order Items */
+.flex-item-order {
+    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+    color: white;
+    min-width: 120px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+    margin: 0 3px;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.flex-item-order:hover {
+    box-shadow: 0 5px 12px rgba(142, 68, 173, 0.4);
+}
+
+/* Order Values */
+.order-0 {
+    order: 0;
+}
+
+.order-1 {
+    order: 1;
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.order-2 {
+    order: 2;
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.order-3 {
+    order: 3;
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+}
+
+.order-minus1 {
+    order: -1;
+    background: linear-gradient(135deg, #27ae60, #2ecc71);
+}
+
+/* Responsive demo specific styles */
+.responsive-demo {
+    flex-direction: column;
+    min-height: 200px;
+}
+
+.header-item {
+    order: 1;
+    background: linear-gradient(135deg, #34495e, #2c3e50);
+    min-width: auto;
+    width: 100%;
+}
+
+.sidebar-item {
+    order: 3;
+    background: linear-gradient(135deg, #e67e22, #d35400);
+    min-width: auto;
+    width: 100%;
+}
+
+.content-item {
+    order: 2;
+    background: linear-gradient(135deg, #16a085, #1abc9c);
+    min-width: auto;
+    width: 100%;
+    flex-grow: 1;
+}
+
+/* Interactive Order Container */
+.interactive-container-order {
+    display: flex;
+    background-color: #e9ecef;
+    border: 3px solid #8e44ad;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    min-height: 120px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.interactive-container-order::before {
+    content: 'Container Order Interativo';
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: #8e44ad;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.interactive-order-item {
+    order: 0;
+    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+    margin: 0 5px;
+    min-width: 140px;
+}
+
+/* Controls for Order */
+.controls-order {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #8e44ad;
+}
+
+.controls-order .control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.controls-order .control-group label {
+    font-weight: bold;
+    color: #495057;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.controls-order .control-group input[type="range"] {
+    width: 150px;
+    height: 6px;
+    border-radius: 3px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+.controls-order .control-group input[type="range"]:hover {
+    opacity: 1;
+}
+
+.controls-order .control-group input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #8e44ad;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(142, 68, 173, 0.3);
+}
+
+.controls-order .control-group input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #8e44ad;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(142, 68, 173, 0.3);
+}
+
+/* Order explanation */
+.order-explanation {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid #8e44ad;
+    color: #495057;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Align-self Property Styles */
+.alignself-demo {
+    background: linear-gradient(135deg, #dee2e6 0%, #adb5bd 100%);
+    min-height: 120px;
+    border: 2px solid #6c757d;
+}
+
+.flex-item-alignself {
+    background: rgba(255, 255, 255, 0.9);
+    color: #2d3436;
+    border: 2px solid #6c757d;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 100px;
+    margin: 0 5px;
+}
+
+.interactive-alignself-item {
+    min-width: 100px;
+    padding: 1rem;
+    margin: 0 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #6c757d;
+    background: rgba(255, 255, 255, 0.9);
+    color: #2d3436;
+}
+
+.controls-alignself {
+    background: linear-gradient(135deg, #e9ecef 0%, #ced4da 100%);
+    border: 2px solid #adb5bd;
+}
+
+.alignself-explanation {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid #6c757d;
+    color: #495057;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .property-header h2 {
+        font-size: 1.3rem;
+    }
+    
+    .comparison {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .concepts-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    main {
+        padding: 0 1rem;
+    }
+    
+    .flex-item {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .controls button {
+        width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flex-item {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+    
+    .item-normal, .item-flex {
+        width: 60px;
+        height: 50px;
+        font-size: 1rem;
+    }
+    
+    .flex-item-direction {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2rem;
+        margin: 3px;
+    }
+    
+    .flex-item-wrap {
+        min-width: 80px;
+        height: 50px;
+        font-size: 0.8rem;
+        margin: 2px;
+    }
+    
+    .flex-item-align {
+        min-width: 80px;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        margin: 0 3px;
+    }
+    
+    .flex-item-content {
+        width: 70px;
+        height: 50px;
+        font-size: 0.9rem;
+        margin: 2px;
+    }
+    
+    .flex-item-grow {
+        min-width: 80px;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        margin: 0 2px;
+    }
+    
+    .flex-item-shrink {
+        min-width: 120px;
+        padding: 0.8rem;
+        font-size: 0.75rem;
+        margin: 0 2px;
+    }
+    
+    .flex-item-basis {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        margin: 0 2px;
+    }
+    
+    .flex-item-flex {
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        margin: 0 2px;
+    }
+    
+    .flex-item-order {
+        min-width: 100px;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        margin: 0 2px;
+    }
+    
+    .interactive-order-item {
+        min-width: 120px;
+    }
+    
+    .flex-container-shrink {
+        max-width: 350px;
+        padding: 0.8rem;
+    }
+    
+    .interactive-container-shrink {
+        max-width: 300px;
+        padding: 1rem;
+    }
+    
+    .controls-grow {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+    
+    .controls-shrink {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+    
+    .controls-basis {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+    
+    .controls-flex {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+    
+    .controls-order {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+    
+    .controls-order .control-group input[type="range"] {
+        width: 120px;
+    }
+    
+    .controls-basis .control-group select {
+        min-width: 120px;
+    }
+    
+    .controls-flex .control-group select {
+        min-width: 150px;
+    }
+    
+    .controls-alignself {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+    
+    .flex-item-alignself {
+        min-width: 80px;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        margin: 0 2px;
+    }
+    
+    .interactive-alignself-item {
+        min-width: 100px;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .controls-alignself .control-group select {
+        min-width: 120px;
+    }
+    
+    .control-group input[type="range"] {
+        width: 100px;
+    }
+    
+    .flex-container-wrap {
+        max-width: 400px;
+        padding: 0.8rem;
+    }
+    
+    .flex-container-align {
+        max-width: 400px;
+        padding: 0.8rem;
+        min-height: 120px;
+    }
+    
+    .flex-container-content {
+        max-width: 350px;
+        padding: 0.8rem;
+        min-height: 180px;
+    }
+    
+    .interactive-container-wrap {
+        max-width: 400px;
+        padding: 1rem;
+    }
+    
+    .interactive-container-align {
+        max-width: 400px;
+        padding: 1rem;
+        min-height: 120px;
+    }
+    
+    .interactive-container-content {
+        max-width: 350px;
+        padding: 1rem;
+        min-height: 180px;
+    }
+    
+    .column, .column-reverse {
+        min-height: 220px;
+    }
+    
+    .flex-container {
+        padding: 0.5rem;
+        min-height: 80px;
+    }
+    
+    .flex-item-wrap {
+        min-width: 70px;
+        height: 45px;
+        font-size: 0.75rem;
+        margin: 1px;
+    }
+    
+    .flex-item-align {
+        min-width: 70px;
+        padding: 0.6rem;
+        font-size: 0.75rem;
+        margin: 0 2px;
+    }
+    
+    .flex-item-content {
+        width: 60px;
+        height: 45px;
+        font-size: 0.8rem;
+        margin: 1px;
+    }
+    
+    .flex-item-grow {
+        min-width: 70px;
+        padding: 0.6rem;
+        font-size: 0.75rem;
+        margin: 0 1px;
+    }
+    
+    .flex-item-shrink {
+        min-width: 100px;
+        padding: 0.6rem;
+        font-size: 0.7rem;
+        margin: 0 1px;
+    }
+    
+    .flex-item-basis {
+        padding: 0.6rem;
+        font-size: 0.75rem;
+        margin: 0 1px;
+    }
+    
+    .flex-item-flex {
+        padding: 0.6rem;
+        font-size: 0.75rem;
+        margin: 0 1px;
+    }
+    
+    .flex-container-shrink {
+        max-width: 280px;
+        padding: 0.5rem;
+    }
+    
+    .interactive-container-shrink {
+        max-width: 250px;
+        padding: 0.8rem;
+    }
+    
+    .interactive-shrink-item {
+        min-width: 90px;
+    }
+    
+    .controls-grow {
+        padding: 0.8rem;
+        gap: 0.6rem;
+    }
+    
+    .controls-shrink {
+        padding: 0.8rem;
+        gap: 0.6rem;
+    }
+    
+    .controls-basis {
+        padding: 0.8rem;
+        gap: 0.6rem;
+    }
+    
+    .controls-flex {
+        padding: 0.8rem;
+        gap: 0.6rem;
+    }
+    
+    .controls-basis .control-group select {
+        min-width: 100px;
+        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+    
+    .controls-flex .control-group select {
+        min-width: 120px;
+        padding: 6px 8px;
+        font-size: 0.75rem;
+    }
+    
+    .control-group input[type="range"] {
+        width: 80px;
+    }
+    
+    .control-group label {
+        font-size: 0.8rem;
+    }
+    
+    .flex-container-wrap {
+        max-width: 300px;
+        padding: 0.5rem;
+        min-height: 100px;
+    }
+    
+    .flex-container-align {
+        max-width: 300px;
+        padding: 0.5rem;
+        min-height: 100px;
+    }
+    
+    .flex-container-content {
+        max-width: 280px;
+        padding: 0.5rem;
+        min-height: 160px;
+    }
+    
+    .interactive-container-wrap {
+        max-width: 300px;
+        padding: 0.8rem;
+        min-height: 100px;
+    }
+    
+    .interactive-container-align {
+        max-width: 300px;
+        padding: 0.8rem;
+        min-height: 100px;
+    }
+    
+    .interactive-container-content {
+        max-width: 280px;
+        padding: 0.8rem;
+        min-height: 160px;
+    }
+    
+    .large-text {
+        font-size: 1.1rem;
+    }
+    
+    .medium-text {
+        font-size: 0.9rem;
+    }
+    
+    .small-text {
+        font-size: 0.7rem;
+    }
+    
+    .wrap-demo, .wrap-reverse-demo {
+        min-height: 120px;
+    }
+    
+    .flex-item-direction {
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+        margin: 2px;
+    }
+    
+    .column, .column-reverse {
+        min-height: 180px;
+    }
+    
+    .interactive-container {
+        padding: 1rem;
+        min-height: 100px;
+    }
+}
