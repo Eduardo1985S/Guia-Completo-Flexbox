@@ -42,7 +42,7 @@
     --color-bg-code-light: #e9ecef;
 
     /* Gradientes principais */
-    --gradient-header: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    --gradient-header: linear-gradient(135deg, #1877F2 0%, #166FE5 100%);
     --gradient-flex-item: linear-gradient(135deg, #ff6b6b, #ee5a24);
     --gradient-flex-item-2: linear-gradient(135deg, #4ecdc4, #44a08d);
     --gradient-flex-item-3: linear-gradient(135deg, #45b7d1, #96c93d);
