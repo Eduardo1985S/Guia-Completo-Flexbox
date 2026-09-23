@@ -10,11 +10,9 @@
 
 ## 🚀 Comece Agora - É Simples!
 
-**📂 Baixe os arquivos** → **🌐 Abr**🎯 Sua jornada no Flexbox começa agora!**
-
-**📖 Abra o arquivo `index.html` e comece a explorar!**
-
-**✨ Lembre-se: não há pergunta boba, só layout que ainda não tentou! 😄*** → **🎮 Comece a aprender!**
+1. **📂 Baixe os arquivos** do projeto e extraia o ZIP, se necessário.
+2. **🌐 Abra o arquivo `index.html`** no navegador, mantendo a pasta `css` junto dele.
+3. **🎮 Comece a aprender!** Explore as seções e experimente os controles.
 
 Não precisa instalar nada. Funciona em qualquer navegador moderno!
 
